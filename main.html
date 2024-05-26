@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-epuiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/c474273e64.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="header">
+    <div id="container">
+      <nav>
+        <img src="images/logo.jpg" alt="logo">
+        
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>   
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Full Stack Developer</p>
+        <h1>Hi,I'm <span>Adithya</span><br>and  web-development</h1></div>
+    </div>
+  </div>
+  <!--------------about------------->
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/image 4.png">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About Me</h1>
+          <p>
+            I'm Adithya,I have a strong foundation in Python, HTML, CSS,
+             JavaScript, and SQL, which I have honed through various personal
+              projects and hackathons. My experience includes developing 
+              responsive web interfaces, enhancing web functionality,and
+               managing databases efficiently.</p>
+
+               <div class="tab-titles">
+                <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('experience')">experience</p>
+                <p class="tab-links"onclick="opentab('education')">Education</p>
+               </div>
+               <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li><span>web Development</span><br>Designing web app Development</li>
+                  <li><span>Python</span><br>Designing game Development</li>
+                  <li><span>App Development</span><br>Building Android/IOS apps</li>
+                </ul>
+               </div>
+               <div class="tab-contents" id="experience">
+                 <ul>
+                  <li><span>2023-current</span><br>Designing web app Development</li>
+                  <li><span>2022-2023</span><br>Designing game in Python</li>
+                  <li><span>2021-2022</span><br>Building Android App Development</li>
+                </ul>
+               </div>
+               <div class="tab-contents" id="education">
+                <ul>
+                  <li><span>2024</span><br> web Development</li>
+                  <li><span>2023</span><br>IT from MCE Chennai</li>
+                  <li><span>2020</span><br>school from SF Chennai</li>
+                </ul>
+               </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-----------------services------------>
+<div id="services">
+  <div id="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <div>
+        <i class="fa-solid fa-code"></i>
+        <h2>Web Design</h2>
+        <p> It ensures websites are visually appealing, user-friendly,and responsive across different devices.</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div>
+        <i class="fa-brands fa-python"></i>
+        <h2>Python Design</h2>
+        <p> It ensures websites are visually appealing, user-friendly,and responsive across different devices.</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div>
+        <i class="fa-brands fa-app-store"></i>
+        <h2>App Design</h2>
+        <p> It ensures websites are visually appealing, user-friendly,and responsive across different devices.</p>
+        <a href="#">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+      for(tablink of tablinks){
+        tablink.classList.remove("active-links");
+      }
+      for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-links");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
+
+</body>
+</html>
